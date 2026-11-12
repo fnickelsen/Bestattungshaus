@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Datenschutz · Bestattungshaus Nickelsen</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<style>
+@font-face { font-family: "Libre Caslon Text"; font-weight: 400; font-style: normal; font-display: swap; src: url("fonts/libre-caslon-text-400.woff2") format("woff2"); }
+@font-face { font-family: "Libre Caslon Text"; font-weight: 400; font-style: italic; font-display: swap; src: url("fonts/libre-caslon-text-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "Source Sans 3"; font-weight: 400; font-style: normal; font-display: swap; src: url("fonts/source-sans-3-400.woff2") format("woff2"); }
+@font-face { font-family: "Source Sans 3"; font-weight: 600; font-style: normal; font-display: swap; src: url("fonts/source-sans-3-600.woff2") format("woff2"); }
+html { color-scheme: light dark; } body { margin: 0; } img { max-width: 100%; } [hidden] { display: none !important; }
+
+/* Layout: ruhige Einzelseite, Inhalt max. 1120px, Text links / Bild rechts im Wechsel; Fotos klein gerahmt, weil die Originale niedrig aufgelöst sind */
+:root {
+  --leinen: #F6F2EA;
+  --papier: #FFFFFF;
+  --tinte: #2A2A27;
+  --schiefer: #5E5C57;
+  --oliv: #55604A;
+  --auf-oliv: #F6F2EA;
+  --messing: #A88A5A;
+  --sand: #E2DCD0;
+  --band: #55604A;
+  --auf-band: #F6F2EA;
+  --serif: "Libre Caslon Text", Georgia, "Times New Roman", serif;
+  --sans: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+  --max: 1120px;
+  --gutter-l: max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --leinen: #1E201C; --papier: #262923; --tinte: #ECE7DC; --schiefer: #B4AFA4;
+    --oliv: #9AA88A; --auf-oliv: #1E201C; --messing: #C2A576; --sand: #3A3D35; --band: #2C3227; --auf-band: #ECE7DC;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --leinen: #1E201C; --papier: #262923; --tinte: #ECE7DC; --schiefer: #B4AFA4;
+  --oliv: #9AA88A; --auf-oliv: #1E201C; --messing: #C2A576; --sand: #3A3D35; --band: #2C3227; --auf-band: #ECE7DC;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  background: var(--leinen); color: var(--tinte);
+  font: 400 18px/1.6 var(--sans);
+  -webkit-text-size-adjust: 100%;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--leinen); }
+a { color: var(--oliv); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--messing); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.2; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(32px, 4.4vw, 46px); }
+h2 { font-size: clamp(26px, 3vw, 32px); }
+h3 { font-family: var(--sans); font-weight: 600; font-size: 19px; line-height: 1.35; }
+p { margin: 0; max-width: 64ch; }
+.wrap { max-width: var(--max); margin: 0 auto; padding-left: var(--gutter-l); padding-right: var(--gutter-r); }
+.label { font: 600 13px/1.3 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--schiefer); }
+.strich { display: block; width: 40px; height: 1px; background: var(--messing); }
+.tel { font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* Kopf */
+header.kopf { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--leinen); border-bottom: 1px solid var(--sand); }
+.kopf .wrap { display: flex; align-items: center; gap: 24px; padding-block: 10px; }
+.marke { display: grid; gap: 2px; text-decoration: none; color: var(--oliv); flex: none; }
+.marke .logo { display: block; height: 52px; width: auto; max-width: 100%; }
+.fusslogo { display: block; width: 320px; height: auto; max-width: 100%; margin-left: -54px; }
+nav.haupt { display: flex; gap: 22px; flex-wrap: wrap; margin-left: auto; }
+nav.haupt a { color: var(--tinte); text-decoration: none; font-size: 16px; }
+nav.haupt a:hover { color: var(--oliv); text-decoration: underline; }
+.erreichbar { text-align: right; flex: none; }
+.erreichbar small { display: block; font-size: 13px; color: var(--schiefer); line-height: 1.2; }
+.erreichbar a { display: inline-block; padding-block: 4px; font: 600 19px/1.3 var(--sans); text-decoration: none; }
+@media (max-width: 1020px) { nav.haupt { display: none; } .erreichbar { margin-left: auto; } }
+@media (max-width: 460px) { .erreichbar small { display: none; } .erreichbar a { font-size: 17px; } .marke .logo { height: 42px; } }
+
+/* Abschnitte */
+section { padding-block: 88px; }
+section + section { border-top: 1px solid var(--sand); }
+.kopfzeile { display: grid; gap: 14px; margin-bottom: 40px; }
+.kopfzeile p { color: var(--schiefer); }
+@media (max-width: 700px) { section { padding-block: 60px; } }
+
+/* Fotos */
+figure { margin: 0; }
+.foto { background: var(--papier); padding: 10px; border: 1px solid var(--sand); max-width: 100%; }
+.foto img { display: block; width: 100%; height: auto; }
+figcaption { font-size: 15px; color: var(--schiefer); padding-top: 10px; line-height: 1.4; }
+
+/* Einstieg */
+.einstieg .wrap { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 56px; align-items: center; }
+.einstieg .text { display: grid; gap: 22px; min-width: 0; }
+.einstieg .foto { max-width: 520px; justify-self: end; }
+.knoepfe { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; }
+.knopf { display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 4px; font: 600 17px/1 var(--sans); text-decoration: none; border: 1px solid var(--oliv); }
+.knopf.voll { background: var(--oliv); color: var(--auf-oliv); }
+.knopf.voll:hover { filter: brightness(.9); }
+.knopf.rahmen { color: var(--oliv); }
+.knopf.rahmen:hover { background: var(--papier); }
+@media (max-width: 820px) { .einstieg .wrap { grid-template-columns: 1fr; gap: 36px; } .einstieg .foto { justify-self: start; } }
+
+/* Trauerfall */
+.trauerfall { background: var(--papier); }
+.trauerfall .raster { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 56px; align-items: start; }
+ol.schritte { list-style: none; margin: 0; padding: 0; display: grid; gap: 28px; counter-reset: s; }
+ol.schritte li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 16px; counter-increment: s; }
+ol.schritte li::before { content: counter(s); font: 400 28px/1 var(--serif); color: var(--messing); padding-top: 2px; }
+ol.schritte p { color: var(--schiefer); margin-top: 4px; }
+.nummern { margin-top: 10px; display: grid; gap: 4px; }
+.nummern a { font: 600 22px/1.3 var(--sans); text-decoration: none; }
+.unterlagen { background: var(--leinen); border: 1px solid var(--sand); padding: 28px; display: grid; gap: 16px; }
+.unterlagen ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.unterlagen li { display: grid; grid-template-columns: 18px minmax(0,1fr); gap: 10px; line-height: 1.45; }
+.unterlagen li::before { content: ""; width: 12px; height: 12px; border: 1px solid var(--oliv); margin-top: 6px; }
+.unterlagen li small { display: block; color: var(--schiefer); font-size: 15px; }
+@media (max-width: 860px) { .trauerfall .raster { grid-template-columns: 1fr; gap: 40px; } }
+
+/* Leistungen */
+.leistungen .gruppen { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; }
+.gruppe { display: grid; gap: 14px; align-content: start; }
+.gruppe ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.gruppe li { padding-left: 18px; position: relative; line-height: 1.45; }
+.gruppe li::before { content: ""; position: absolute; left: 0; top: .7em; width: 8px; height: 1px; background: var(--messing); }
+.versprechen { margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--sand); display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px 48px; color: var(--schiefer); }
+@media (max-width: 860px) { .leistungen .gruppen { grid-template-columns: 1fr; gap: 32px; } .versprechen { grid-template-columns: 1fr; } }
+
+/* Bestattungsarten */
+.arten { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; align-items: start; }
+.art { background: var(--papier); border: 1px solid var(--sand); display: grid; grid-template-rows: auto 1fr; }
+.art img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; max-width: 100%; }
+.art div { padding: 22px 24px 26px; display: grid; gap: 10px; align-content: start; }
+.art p { color: var(--schiefer); font-size: 17px; }
+.graeber { margin-top: 56px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 48px; }
+dl.grabarten { margin: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px 40px; }
+dl.grabarten div { display: grid; gap: 4px; align-content: start; }
+dl.grabarten dt { font: 600 18px/1.35 var(--sans); }
+dl.grabarten dd { margin: 0; color: var(--schiefer); font-size: 17px; }
+@media (max-width: 900px) { .arten { grid-template-columns: 1fr; max-width: 520px; } .graeber { grid-template-columns: 1fr; gap: 28px; } }
+@media (max-width: 600px) { dl.grabarten { grid-template-columns: 1fr; } }
+
+/* Haus */
+.chronik { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 56px; align-items: start; }
+ol.jahre { list-style: none; margin: 0; padding: 0; border-left: 1px solid var(--sand); display: grid; gap: 24px; }
+ol.jahre li { padding-left: 24px; position: relative; display: grid; gap: 4px; }
+ol.jahre li::before { content: ""; position: absolute; left: -5px; top: 9px; width: 9px; height: 9px; border-radius: 50%; background: var(--leinen); border: 1px solid var(--messing); }
+ol.jahre .jahr { font: 400 22px/1.2 var(--serif); color: var(--oliv); font-variant-numeric: tabular-nums; }
+ol.jahre p { color: var(--schiefer); }
+.inhaber { display: grid; gap: 18px; max-width: 298px; }
+.inhaber blockquote { margin: 0; font: italic 400 19px/1.55 var(--serif); }
+.inhaber cite { display: block; font: 600 15px/1.4 var(--sans); font-style: normal; color: var(--schiefer); margin-top: 10px; }
+.raeume { margin-top: 64px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.raum { display: grid; gap: 14px; align-content: start; }
+.raum img { height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+.raum p { color: var(--schiefer); font-size: 17px; }
+@media (max-width: 900px) { .chronik { grid-template-columns: 1fr; gap: 40px; } .raeume { grid-template-columns: 1fr; max-width: 520px; } }
+
+/* Zwei-Spalter */
+.zweier { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: center; }
+.zweier .text { display: grid; gap: 18px; }
+.zweier .foto { max-width: 420px; width: 100%; }
+.zweier.links .foto { order: -1; justify-self: start; }
+.zweier:not(.links) .foto { justify-self: end; }
+ul.punkte { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+ul.punkte li { padding-left: 18px; position: relative; }
+ul.punkte li::before { content: ""; position: absolute; left: 0; top: .75em; width: 8px; height: 1px; background: var(--messing); }
+@media (max-width: 820px) { .zweier { grid-template-columns: 1fr; gap: 32px; } .zweier .foto, .zweier.links .foto { order: 0; justify-self: start; } }
+
+/* Leitsatz */
+.leitsatz { padding-block: 72px; }
+.leitsatz .wrap { display: grid; justify-items: center; gap: 18px; text-align: center; }
+.leitsatz p { font: italic 400 clamp(24px, 3.2vw, 34px)/1.35 var(--serif); color: var(--oliv); max-width: 24ch; text-wrap: balance; }
+
+/* Mehr erfahren */
+details { border-top: 1px solid var(--sand); margin-top: 6px; padding-top: 10px; }
+details summary { cursor: pointer; font-weight: 600; color: var(--oliv); font-size: 16px; list-style: none; display: flex; align-items: center; gap: 8px; min-height: 32px; }
+details summary::-webkit-details-marker { display: none; }
+details summary::after { content: "+"; font: 400 20px/1 var(--sans); color: var(--messing); }
+details[open] summary::after { content: "\2212"; }
+details p { margin-top: 10px; font-size: 16px; }
+details strong { color: var(--tinte); font-weight: 600; }
+
+/* Kontakt + Fuss */
+.kontakt { background: var(--band); color: var(--auf-band); }
+.kontakt h2, .kontakt a { color: var(--auf-band); }
+.kontakt .label { color: var(--auf-band); opacity: .8; }
+.kontakt .raster { display: grid; grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(0, 1fr)); gap: 48px; }
+.kontakt .block { display: grid; gap: 10px; align-content: start; }
+.kontakt .gross { font: 600 26px/1.25 var(--sans); text-decoration: none; }
+.kontakt address { font-style: normal; }
+@media (max-width: 860px) { .kontakt .raster { grid-template-columns: 1fr; gap: 32px; } }
+footer { padding-block: 40px 120px; font-size: 15px; color: var(--schiefer); }
+footer .wrap { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 32px; }
+footer p { max-width: none; }
+footer a { display: inline-block; padding-block: 6px; }
+@media (max-width: 700px) { footer .wrap { grid-template-columns: 1fr; } }
+
+/* Mobile Anrufleiste */
+.leiste { display: none; }
+@media (max-width: 700px) {
+  .leiste {
+    display: grid; grid-template-columns: 2fr 1fr; gap: 8px;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 25;
+    background: var(--leinen); border-top: 1px solid var(--sand);
+    padding: 10px var(--gutter-r) calc(10px + env(safe-area-inset-bottom, 0px)) var(--gutter-l);
+  }
+  .leiste .knopf { justify-content: center; }
+  footer { padding-bottom: 130px; }
+}
+</style>
+<style>
+.recht { padding-block: 64px 88px; }
+.recht .wrap { display: grid; gap: 40px; }
+.recht .wrap > * { max-width: 760px; }
+.recht h1 { font-size: clamp(30px, 4vw, 40px); }
+.recht h2 { font-size: 24px; }
+.recht section { padding: 0; border: 0; display: grid; gap: 12px; }
+.recht p, .recht li { max-width: 68ch; }
+.recht ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.recht address { font-style: normal; }
+.recht .stand { color: var(--schiefer); font-size: 16px; }
+.zurueck { color: var(--tinte); text-decoration: none; font-size: 16px; margin-left: auto; }
+.zurueck:hover { color: var(--oliv); text-decoration: underline; }
+@media (max-width: 560px) { .zurueck { display: none; } }
+</style>
+</head>
+<body>
+<header class="kopf">
+  <div class="wrap">
+    <a class="marke" href="index.html" aria-label="Bestattungshaus Nickelsen, zur Startseite">
+      <svg class="logo" viewBox="-8 0 316 108" width="316" height="108" role="img" aria-label="Bestattungshaus Nickelsen"><title>Bestattungshaus Nickelsen</title><path d="M104.0,20 C116.65,10 137.35,10 150.0,20 S183.35,30 196.0,20" fill="none" stroke="var(--messing)" stroke-width="3" stroke-linecap="round"/><path d="M41.071999999999996 93.28 9.519999999999994 49.312V89.312L15.215999999999994 90.528V92.0H1.199999999999993V90.528L6.959999999999994 89.312V45.408L1.199999999999993 44.192V42.72H14.127999999999993L40.495999999999995 78.944V45.408L34.8 44.192V42.72H48.815999999999995V44.192L43.056 45.408V93.28Z M61.36 42.08Q63.215999999999994 42.08 64.368 43.263999999999996Q65.52 44.448 65.52 46.24Q65.52 47.967999999999996 64.368 49.152Q63.215999999999994 50.336 61.36 50.336Q59.504 50.336 58.384 49.152Q57.263999999999996 47.967999999999996 57.263999999999996 46.24Q57.263999999999996 44.448 58.384 43.263999999999996Q59.504 42.08 61.36 42.08ZM69.232 92.0H53.488V90.72L58.352 89.76V63.135999999999996L53.616 61.408V60.512L63.855999999999995 57.44H64.432V89.76L69.232 90.72Z M74.288 75.488Q74.288 70.24 76.464 66.144Q78.64 62.048 82.512 59.744Q86.384 57.44 91.312 57.44Q94.512 57.44 97.136 58.464Q99.75999999999999 59.488 101.29599999999999 61.216Q102.832 62.944 102.832 64.992Q102.832 66.656 102.032 67.648Q101.232 68.64 99.88799999999999 68.64Q96.56 68.64 96.112 64.608Q95.728 61.536 94.73599999999999 60.512Q93.744 59.488 91.50399999999999 59.488Q86.448 59.488 83.63199999999999 63.456Q80.81599999999999 67.424 80.81599999999999 74.208Q80.81599999999999 80.736 83.696 84.352Q86.576 87.968 91.824 87.968Q94.768 87.968 97.29599999999999 86.78399999999999Q99.824 85.6 101.488 83.29599999999999L102.192 82.336L103.40799999999999 82.976L103.088 83.80799999999999Q101.488 88.032 98.032 90.336Q94.576 92.64 89.904 92.64Q85.36 92.64 81.80799999999999 90.464Q78.256 88.288 76.27199999999999 84.384Q74.288 80.48 74.288 75.488Z M145.392 90.72V92.0H134.19199999999998L120.94399999999999 75.872L118.448 78.752V89.76L123.24799999999999 90.72V92.0H107.69599999999998V90.72L112.55999999999999 89.76V44.576L107.88799999999999 42.848V42.016L117.80799999999999 38.879999999999995H118.448V75.29599999999999L129.136 63.2Q130.48 61.664 130.48 60.896Q130.48 60.32 129.51999999999998 60.0Q128.56 59.68 125.74399999999999 59.36V58.08H140.07999999999998V59.36Q136.176 60.064 134.832 60.70399999999999Q133.488 61.343999999999994 132.016 63.007999999999996L124.78399999999999 71.456L140.016 89.76Z M151.472 72.288Q151.408 72.736 151.408 73.75999999999999Q151.408 80.8 154.224 84.384Q157.04 87.968 162.48 87.968Q165.61599999999999 87.968 168.30399999999997 86.848Q170.992 85.728 172.656 83.68L173.424 82.72L174.512 83.36L174.128 84.256Q172.464 88.16 168.752 90.4Q165.04 92.64 160.368 92.64Q155.824 92.64 152.336 90.49600000000001Q148.848 88.352 146.928 84.48Q145.008 80.608 145.008 75.55199999999999Q145.008 70.24 147.152 66.112Q149.296 61.983999999999995 153.168 59.711999999999996Q157.04 57.44 162.096 57.44Q168.368 57.44 171.728 61.12Q175.088 64.8 175.216 71.904L174.768 72.288ZM151.6 70.496 168.304 69.92Q168.496 69.152 168.496 67.29599999999999Q168.496 59.424 161.52 59.424Q157.296 59.424 154.736 62.304Q152.176 65.184 151.6 70.496Z M195.12 92.0H180.336V90.784L184.81600000000003 89.824V44.512L180.336 42.848V42.016L190.12800000000001 38.879999999999995H190.704V89.824L195.12 90.784Z M220.78400000000002 58.528V67.424H219.44000000000003Q218.48000000000002 59.36 211.95200000000003 59.36Q209.39200000000002 59.36 207.88800000000003 60.768Q206.38400000000001 62.176 206.38400000000001 64.544Q206.38400000000001 66.336 207.312 67.584Q208.24 68.832 209.584 69.66399999999999Q210.92800000000003 70.496 213.29600000000002 71.584Q216.24 72.928 218.0 74.08Q219.76000000000002 75.232 221.04000000000002 77.24799999999999Q222.32000000000002 79.264 222.32000000000002 82.272Q222.32000000000002 87.008 219.15200000000002 89.824Q215.984 92.64 210.544 92.64Q208.496 92.64 206.032 92.256Q203.568 91.872 201.71200000000002 91.232L201.328 80.864H202.864Q203.312 85.728 205.36 88.22399999999999Q207.40800000000002 90.72 211.056 90.72Q213.936 90.72 215.66400000000002 89.12Q217.39200000000002 87.52 217.39200000000002 84.832Q217.39200000000002 82.848 216.43200000000002 81.47200000000001Q215.472 80.096 214.06400000000002 79.232Q212.656 78.368 210.096 77.088Q207.216 75.68 205.488 74.56Q203.76000000000002 73.44 202.544 71.52Q201.328 69.6 201.328 66.78399999999999Q201.328 62.304 204.43200000000002 59.872Q207.536 57.44 213.23200000000003 57.44Q215.40800000000002 57.44 217.488 57.727999999999994Q219.568 58.016 220.78400000000002 58.528Z M235.568 72.288Q235.504 72.736 235.504 73.75999999999999Q235.504 80.8 238.32 84.384Q241.136 87.968 246.576 87.968Q249.712 87.968 252.39999999999998 86.848Q255.088 85.728 256.752 83.68L257.52 82.72L258.608 83.36L258.224 84.256Q256.56 88.16 252.848 90.4Q249.136 92.64 244.464 92.64Q239.92000000000002 92.64 236.43200000000002 90.49600000000001Q232.94400000000002 88.352 231.024 84.48Q229.104 80.608 229.104 75.55199999999999Q229.104 70.24 231.248 66.112Q233.392 61.983999999999995 237.264 59.711999999999996Q241.136 57.44 246.192 57.44Q252.464 57.44 255.824 61.12Q259.184 64.8 259.312 71.904L258.86400000000003 72.288ZM235.696 70.496 252.4 69.92Q252.592 69.152 252.592 67.29599999999999Q252.592 59.424 245.616 59.424Q241.392 59.424 238.832 62.304Q236.272 65.184 235.696 70.496Z M300.336 90.72V92.0H284.656V90.72L289.456 89.824V71.008Q289.456 68.19200000000001 289.29600000000005 66.56Q289.136 64.928 288.68800000000005 63.903999999999996Q287.47200000000004 60.96 283.696 60.96Q281.392 60.96 279.24800000000005 61.983999999999995Q277.10400000000004 63.007999999999996 275.504 64.928V89.76L280.30400000000003 90.72V92.0H264.56V90.72L269.42400000000004 89.76V63.2L264.68800000000005 61.408V60.576L274.608 57.44H275.24800000000005V62.879999999999995Q278.0 60.256 281.10400000000004 58.848Q284.208 57.44 287.28000000000003 57.44Q289.84000000000003 57.44 291.824 58.464Q293.808 59.488 294.704 61.28Q295.216 62.304 295.376 64.0Q295.536 65.696 295.536 70.368V89.824Z" fill="var(--oliv)"/></svg>
+    </a>
+    <a class="zurueck" href="index.html">Zur Startseite</a>
+    <div class="erreichbar" style="margin-left:0">
+      <small>Tag und Nacht erreichbar</small>
+      <a class="tel" href="tel:+494401938993">04401 93 89 93</a>
+    </div>
+  </div>
+</header>
+
+<main class="recht">
+  <div class="wrap">
+    <div style="display:grid;gap:14px">
+      <span class="strich"></span>
+      <h1>Datenschutzerklärung</h1>
+      <p>Diese Website ist eine reine Informationsseite. Wir setzen keine Cookies, nutzen keine Analyse- oder Statistikwerkzeuge und binden keine Inhalte fremder Anbieter ein.</p>
+    </div>
+
+    <section>
+      <h2>Verantwortlicher</h2>
+      <address>Bestattungshaus Nickelsen<br>Inhaber: Martin Nickelsen<br>Dungenstraße 11<br>26919 Brake (Unterweser)</address>
+      <p>Telefon: <span class="tel">04401 93 89 93</span><br>E-Mail: <a href="mailto:info@bestattungshaus-nickelsen.de">info@bestattungshaus-nickelsen.de</a></p>
+    </section>
+
+    <section>
+      <h2>Hosting und Server-Logfiles</h2>
+      <p>Unsere Website liegt auf Servern der IONOS SE, Elgendorfer Straße 57, 56410 Montabaur. IONOS verarbeitet die Daten in unserem Auftrag (Auftragsverarbeitung nach Art. 28 DSGVO).</p>
+      <p>Bei jedem Aufruf der Website erfasst der Server automatisch folgende Angaben:</p>
+      <ul>
+        <li>die aufgerufene Seite oder Datei</li>
+        <li>die Seite, von der aus Sie zu uns gekommen sind (Referrer)</li>
+        <li>Browsertyp und Browserversion</li>
+        <li>das verwendete Betriebssystem und den Gerätetyp</li>
+        <li>den Zeitpunkt des Zugriffs</li>
+        <li>die IP-Adresse in anonymisierter Form</li>
+      </ul>
+      <p>Diese Daten dienen dazu, die Sicherheit und Stabilität der Website zu gewährleisten. Rechtsgrundlage ist unser berechtigtes Interesse nach Art. 6 Abs. 1 lit. f DSGVO. Die Daten werden bereits bei der Erhebung anonymisiert und nach 8 Wochen gelöscht. Wir führen sie nicht mit anderen Daten zusammen und ziehen keine Rückschlüsse auf Ihre Person.</p>
+    </section>
+
+    <section>
+      <h2>Kontakt per Telefon oder E-Mail</h2>
+      <p>Wenn Sie uns anrufen oder eine E-Mail schreiben, verarbeiten wir die Angaben, die Sie uns mitteilen, etwa Name, Telefonnummer, E-Mail-Adresse und Ihr Anliegen. Wir nutzen sie ausschließlich, um Ihre Anfrage zu beantworten und einen Auftrag vorzubereiten oder auszuführen.</p>
+      <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit Ihre Anfrage auf einen Auftrag gerichtet ist, im Übrigen unser berechtigtes Interesse an der Beantwortung nach Art. 6 Abs. 1 lit. f DSGVO. Wir löschen die Daten, sobald Ihr Anliegen erledigt ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+    </section>
+
+    <section>
+      <h2>Cookies, Analyse und eingebundene Inhalte</h2>
+      <p>Wir setzen keine Cookies und verwenden keine Werkzeuge zur Reichweitenmessung oder Statistik. Schriften und Bilder werden von unserem eigenen Server geladen. Es werden keine Karten, Videos oder Inhalte sozialer Netzwerke eingebunden.</p>
+    </section>
+
+    <section>
+      <h2>Links zu anderen Websites</h2>
+      <p>Unsere Seite enthält Links zu anderen Anbietern, zum Beispiel zur Routenplanung bei Google Maps und zu FriedWald. Erst wenn Sie einen solchen Link anklicken, werden Daten an den jeweiligen Anbieter übertragen. Für die Verarbeitung dort ist der jeweilige Anbieter verantwortlich.</p>
+    </section>
+
+    <section>
+      <h2>Empfänger und Übermittlung in Drittländer</h2>
+      <p>Außer unserem Hosting-Anbieter IONOS erhält niemand Daten aus dem Besuch dieser Website. Eine Übermittlung in Länder außerhalb der Europäischen Union findet nicht statt.</p>
+    </section>
+
+    <section>
+      <h2>Ihre Rechte</h2>
+      <p>Sie haben uns gegenüber folgende Rechte hinsichtlich Ihrer personenbezogenen Daten:</p>
+      <ul>
+        <li>Auskunft über die bei uns gespeicherten Daten (Art. 15 DSGVO)</li>
+        <li>Berichtigung unrichtiger Daten (Art. 16 DSGVO)</li>
+        <li>Löschung (Art. 17 DSGVO)</li>
+        <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+        <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
+        <li>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
+      </ul>
+      <p>Dafür genügt eine Nachricht an die oben genannten Kontaktdaten.</p>
+    </section>
+
+    <section>
+      <h2>Widerspruchsrecht</h2>
+      <p>Soweit wir Daten auf Grundlage eines berechtigten Interesses nach Art. 6 Abs. 1 lit. f DSGVO verarbeiten, können Sie dieser Verarbeitung jederzeit aus Gründen widersprechen, die sich aus Ihrer besonderen Situation ergeben. Wir verarbeiten die Daten dann nicht mehr, es sei denn, wir können zwingende schutzwürdige Gründe nachweisen oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.</p>
+    </section>
+
+    <section>
+      <h2>Beschwerde bei der Aufsichtsbehörde</h2>
+      <p>Sie können sich bei einer Datenschutz-Aufsichtsbehörde beschweren. Für uns zuständig ist der Landesbeauftragte für den Datenschutz Niedersachsen, <a href="https://www.lfd.niedersachsen.de" rel="noopener">lfd.niedersachsen.de</a>.</p>
+    </section>
+
+    <section>
+      <h2>Verschlüsselung</h2>
+      <p>Diese Website wird verschlüsselt über HTTPS übertragen.</p>
+    </section>
+
+    <p class="stand">Stand: November 2026</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div style="display:grid;gap:20px">
+      <svg class="fusslogo" viewBox="0 0 520 170" width="520" height="170" role="img" aria-label="Bestattungshaus Nickelsen, Brake (Unterweser)"><title>Bestattungshaus Nickelsen</title><path d="M214.0,30 C226.65,20 247.35,20 260.0,30 S293.35,40 306.0,30" fill="none" stroke="var(--messing)" stroke-width="1.8" stroke-linecap="round"/><path d="M151.072 105.28 119.52 61.312V101.312L125.216 102.528V104.0H111.19999999999999V102.528L116.96 101.312V57.408L111.19999999999999 56.192V54.72H124.12799999999999L150.49599999999998 90.944V57.408L144.8 56.192V54.72H158.816V56.192L153.05599999999998 57.408V105.28Z M171.35999999999999 54.08Q173.21599999999998 54.08 174.368 55.263999999999996Q175.51999999999998 56.448 175.51999999999998 58.24Q175.51999999999998 59.967999999999996 174.368 61.152Q173.21599999999998 62.336 171.35999999999999 62.336Q169.504 62.336 168.384 61.152Q167.26399999999998 59.967999999999996 167.26399999999998 58.24Q167.26399999999998 56.448 168.384 55.263999999999996Q169.504 54.08 171.35999999999999 54.08ZM179.232 104.0H163.488V102.72L168.352 101.76V75.136L163.61599999999999 73.408V72.512L173.856 69.44H174.432V101.76L179.232 102.72Z M184.28799999999998 87.488Q184.28799999999998 82.24 186.464 78.144Q188.64 74.048 192.512 71.744Q196.384 69.44 201.31199999999998 69.44Q204.512 69.44 207.136 70.464Q209.76 71.488 211.296 73.21600000000001Q212.832 74.944 212.832 76.992Q212.832 78.656 212.03199999999998 79.648Q211.232 80.64 209.888 80.64Q206.56 80.64 206.112 76.608Q205.728 73.536 204.736 72.512Q203.744 71.488 201.504 71.488Q196.448 71.488 193.632 75.456Q190.816 79.424 190.816 86.208Q190.816 92.736 193.696 96.352Q196.576 99.968 201.82399999999998 99.968Q204.768 99.968 207.296 98.78399999999999Q209.82399999999998 97.6 211.488 95.29599999999999L212.192 94.336L213.408 94.976L213.088 95.80799999999999Q211.488 100.032 208.03199999999998 102.336Q204.576 104.64 199.904 104.64Q195.35999999999999 104.64 191.808 102.464Q188.256 100.288 186.272 96.384Q184.28799999999998 92.48 184.28799999999998 87.488Z M255.392 102.72V104.0H244.19199999999998L230.944 87.872L228.44799999999998 90.752V101.76L233.248 102.72V104.0H217.696V102.72L222.56 101.76V56.576L217.88799999999998 54.848V54.016L227.808 50.879999999999995H228.44799999999998V87.29599999999999L239.136 75.2Q240.48 73.664 240.48 72.896Q240.48 72.32 239.51999999999998 72.0Q238.56 71.68 235.744 71.36V70.08H250.07999999999998V71.36Q246.176 72.064 244.832 72.704Q243.488 73.344 242.016 75.008L234.784 83.456L250.016 101.76Z M261.472 84.288Q261.408 84.736 261.408 85.75999999999999Q261.408 92.8 264.22400000000005 96.384Q267.04 99.968 272.48 99.968Q275.616 99.968 278.304 98.848Q280.992 97.728 282.656 95.68L283.424 94.72L284.512 95.36L284.128 96.256Q282.464 100.16 278.752 102.4Q275.04 104.64 270.368 104.64Q265.824 104.64 262.336 102.49600000000001Q258.848 100.352 256.928 96.48Q255.008 92.608 255.008 87.55199999999999Q255.008 82.24 257.152 78.112Q259.296 73.984 263.168 71.71199999999999Q267.04 69.44 272.096 69.44Q278.368 69.44 281.728 73.12Q285.088 76.8 285.216 83.904L284.76800000000003 84.288ZM261.6 82.496 278.304 81.92Q278.496 81.152 278.496 79.29599999999999Q278.496 71.424 271.52 71.424Q267.296 71.424 264.736 74.304Q262.176 77.184 261.6 82.496Z M305.12 104.0H290.336V102.784L294.81600000000003 101.824V56.512L290.336 54.848V54.016L300.12800000000004 50.879999999999995H300.704V101.824L305.12 102.784Z M330.78400000000005 70.52799999999999V79.424H329.44000000000005Q328.48 71.36 321.95200000000006 71.36Q319.39200000000005 71.36 317.88800000000003 72.768Q316.384 74.176 316.384 76.544Q316.384 78.336 317.312 79.584Q318.24000000000007 80.832 319.58400000000006 81.66399999999999Q320.92800000000005 82.496 323.29600000000005 83.584Q326.24000000000007 84.928 328.00000000000006 86.08Q329.76000000000005 87.232 331.0400000000001 89.24799999999999Q332.32000000000005 91.264 332.32000000000005 94.272Q332.32000000000005 99.008 329.15200000000004 101.824Q325.98400000000004 104.64 320.54400000000004 104.64Q318.49600000000004 104.64 316.03200000000004 104.256Q313.56800000000004 103.872 311.71200000000005 103.232L311.32800000000003 92.864H312.86400000000003Q313.31200000000007 97.728 315.36 100.22399999999999Q317.408 102.72 321.05600000000004 102.72Q323.93600000000004 102.72 325.66400000000004 101.12Q327.39200000000005 99.52 327.39200000000005 96.832Q327.39200000000005 94.848 326.432 93.47200000000001Q325.47200000000004 92.096 324.0640000000001 91.232Q322.65600000000006 90.368 320.09600000000006 89.088Q317.21600000000007 87.68 315.48800000000006 86.56Q313.76000000000005 85.44 312.54400000000004 83.52Q311.32800000000003 81.6 311.32800000000003 78.78399999999999Q311.32800000000003 74.304 314.432 71.872Q317.53600000000006 69.44 323.232 69.44Q325.408 69.44 327.48800000000006 69.728Q329.56800000000004 70.01599999999999 330.78400000000005 70.52799999999999Z M345.56800000000004 84.288Q345.5040000000001 84.736 345.5040000000001 85.75999999999999Q345.5040000000001 92.8 348.32000000000005 96.384Q351.1360000000001 99.968 356.5760000000001 99.968Q359.71200000000005 99.968 362.4000000000001 98.848Q365.0880000000001 97.728 366.75200000000007 95.68L367.52000000000004 94.72L368.60800000000006 95.36L368.22400000000005 96.256Q366.56000000000006 100.16 362.84800000000007 102.4Q359.1360000000001 104.64 354.46400000000006 104.64Q349.9200000000001 104.64 346.4320000000001 102.49600000000001Q342.9440000000001 100.352 341.02400000000006 96.48Q339.10400000000004 92.608 339.10400000000004 87.55199999999999Q339.10400000000004 82.24 341.24800000000005 78.112Q343.39200000000005 73.984 347.26400000000007 71.71199999999999Q351.1360000000001 69.44 356.19200000000006 69.44Q362.46400000000006 69.44 365.82400000000007 73.12Q369.1840000000001 76.8 369.31200000000007 83.904L368.86400000000003 84.288ZM345.6960000000001 82.496 362.4000000000001 81.92Q362.59200000000004 81.152 362.59200000000004 79.29599999999999Q362.59200000000004 71.424 355.61600000000004 71.424Q351.39200000000005 71.424 348.83200000000005 74.304Q346.27200000000005 77.184 345.6960000000001 82.496Z M410.33600000000007 102.72V104.0H394.65600000000006V102.72L399.4560000000001 101.824V83.008Q399.4560000000001 80.19200000000001 399.29600000000005 78.56Q399.1360000000001 76.928 398.6880000000001 75.904Q397.4720000000001 72.96000000000001 393.6960000000001 72.96000000000001Q391.39200000000005 72.96000000000001 389.24800000000005 73.98400000000001Q387.1040000000001 75.008 385.5040000000001 76.928V101.76L390.3040000000001 102.72V104.0H374.56000000000006V102.72L379.4240000000001 101.76V75.2L374.6880000000001 73.408V72.576L384.60800000000006 69.44H385.2480000000001V74.88Q388.00000000000006 72.256 391.10400000000004 70.848Q394.2080000000001 69.44 397.2800000000001 69.44Q399.8400000000001 69.44 401.82400000000007 70.464Q403.8080000000001 71.488 404.70400000000006 73.28Q405.21600000000007 74.304 405.3760000000001 76.0Q405.53600000000006 77.696 405.53600000000006 82.368V101.824Z" fill="var(--oliv)"/><path d="M98.29374999999999 146.0V137.825H100.90625Q101.75625 137.825 102.4125 138.01875Q103.06875 138.2125 103.44999999999999 138.65Q103.83125 139.0875 103.83125 139.8375Q103.83125 140.4625 103.5375 140.94375000000002Q103.24374999999999 141.425 102.69375 141.6125V141.6625Q103.41874999999999 141.8125 103.83749999999999 142.26875Q104.25625 142.725 104.25625 143.5375Q104.25625 144.375 103.85 144.925Q103.44375 145.475 102.73124999999999 145.7375Q102.01875 146.0 101.11874999999999 146.0ZM99.74374999999999 141.2H100.78125Q101.63125 141.2 102.01875 140.8875Q102.40625 140.575 102.40625 140.05Q102.40625 139.45 102.00625 139.2Q101.60624999999999 138.95 100.80624999999999 138.95H99.74374999999999ZM99.74374999999999 144.875H100.96875Q101.86874999999999 144.875 102.35624999999999 144.54375Q102.84375 144.2125 102.84375 143.525Q102.84375 142.875 102.36875 142.58125Q101.89375 142.2875 100.96875 142.2875H99.74374999999999Z M108.25625 146.0V137.825H113.18125V139.05H109.70625V141.1375H112.64375V142.3625H109.70625V144.775H113.30625V146.0Z M119.86874999999999 146.15Q119.01875 146.15 118.26249999999999 145.8375Q117.50625 145.525 116.91874999999999 144.95L117.70625 144.0Q118.14375 144.425 118.725 144.65625Q119.30624999999999 144.8875 119.89375 144.8875Q120.59375 144.8875 120.95625 144.6Q121.31875 144.3125 121.31875 143.8375Q121.31875 143.5 121.15625 143.29375Q120.99374999999999 143.0875 120.71249999999999 142.9375Q120.43124999999999 142.7875 120.05624999999999 142.6375L118.93124999999999 142.15Q118.53125 141.975 118.15 141.69375Q117.76875 141.4125 117.525 140.99374999999998Q117.28125 140.575 117.28125 139.975Q117.28125 139.325 117.63749999999999 138.80624999999998Q117.99374999999999 138.2875 118.61249999999998 137.98125Q119.23124999999999 137.675 120.03125 137.675Q120.76875 137.675 121.425 137.94375000000002Q122.08125 138.2125 122.54374999999999 138.675L121.78125 139.625Q121.38125 139.3 120.94375 139.11875Q120.50625 138.9375 120.03125 138.9375Q119.45625 138.9375 119.1 139.19375Q118.74374999999999 139.45 118.74374999999999 139.9Q118.74374999999999 140.2125 118.92499999999998 140.41875Q119.10624999999999 140.625 119.4125 140.76875Q119.71875 140.9125 120.04374999999999 141.05L121.15625 141.5125Q121.64375 141.725 122.01875 142.0125Q122.39375 142.3 122.6 142.7125Q122.80624999999999 143.125 122.80624999999999 143.725Q122.80624999999999 144.3875 122.45624999999998 144.9375Q122.10624999999999 145.4875 121.44999999999999 145.81875000000002Q120.79374999999999 146.15 119.86874999999999 146.15Z M128.19375 146.0V139.05H125.83125V137.825H132.00625V139.05H129.64374999999998V146.0Z M134.30624999999998 146.0 136.96874999999997 137.825H138.66875L141.33124999999998 146.0H139.80624999999998L138.55624999999998 141.65Q138.35625 141.0 138.17499999999998 140.3125Q137.99374999999998 139.625 137.81875 138.95H137.76874999999998Q137.60625 139.6375 137.42499999999998 140.31875Q137.24374999999998 141.0 137.04375 141.65L135.78124999999997 146.0ZM135.88125 143.7875V142.65H139.73125V143.7875Z M145.69375 146.0V139.05H143.33124999999998V137.825H149.50625V139.05H147.14374999999998V146.0Z M155.01874999999998 146.0V139.05H152.65624999999997V137.825H158.83124999999998V139.05H156.46874999999997V146.0Z M165.75624999999997 146.15Q165.04374999999996 146.15 164.47499999999997 145.95Q163.90624999999997 145.75 163.49999999999997 145.3125Q163.09374999999997 144.875 162.87499999999997 144.175Q162.65624999999997 143.475 162.65624999999997 142.4875V137.825H164.10624999999996V142.6Q164.10624999999996 143.4625 164.31249999999997 143.9625Q164.51874999999998 144.4625 164.89374999999998 144.675Q165.26874999999998 144.8875 165.75624999999997 144.8875Q166.25624999999997 144.8875 166.6375 144.675Q167.01874999999998 144.4625 167.23749999999998 143.9625Q167.45624999999998 143.4625 167.45624999999998 142.6V137.825H168.84374999999997V142.4875Q168.84374999999997 143.475 168.63124999999997 144.175Q168.41874999999996 144.875 168.01249999999996 145.3125Q167.60624999999996 145.75 167.03749999999997 145.95Q166.46874999999997 146.15 165.75624999999997 146.15Z M173.38124999999997 146.0V137.825H174.96874999999997L177.41874999999996 142.325Q177.64374999999998 142.7375 177.84999999999997 143.2125Q178.05624999999998 143.6875 178.24374999999998 144.175H178.29374999999996Q178.24374999999998 143.5125 178.18124999999998 142.79375Q178.11874999999998 142.075 178.11874999999998 141.4V137.825H179.50624999999997V146.0H177.91874999999996L175.46874999999997 141.5Q175.24374999999998 141.0875 175.02499999999998 140.6125Q174.80624999999998 140.1375 174.61874999999998 139.65H174.56874999999997Q174.64374999999998 140.2875 174.70624999999998 141.00625Q174.76874999999998 141.725 174.76874999999998 142.425V146.0Z M187.51874999999998 146.15Q186.41875 146.15 185.54375 145.66250000000002Q184.66875 145.175 184.16875 144.23125Q183.66875 143.2875 183.66875 141.9375Q183.66875 140.9375 183.96249999999998 140.15Q184.25624999999997 139.3625 184.78749999999997 138.80625Q185.31874999999997 138.25 186.01874999999995 137.9625Q186.71874999999997 137.675 187.53124999999997 137.675Q188.40624999999997 137.675 189.01874999999995 137.9875Q189.63124999999997 138.3 190.00624999999997 138.7125L189.23125 139.6Q188.93124999999998 139.3 188.54375 139.11875Q188.15624999999997 138.9375 187.58124999999998 138.9375Q186.85625 138.9375 186.30624999999998 139.29375Q185.75624999999997 139.65 185.45624999999995 140.3125Q185.15624999999997 140.975 185.15624999999997 141.9Q185.15624999999997 142.825 185.44374999999997 143.5Q185.73125 144.175 186.28749999999997 144.53125Q186.84374999999997 144.8875 187.65624999999997 144.8875Q188.00624999999997 144.8875 188.31874999999997 144.79375Q188.63124999999997 144.7 188.83124999999998 144.525V142.7625H187.28124999999997V141.575H190.13124999999997V145.175Q189.71874999999997 145.5875 189.03749999999997 145.86875Q188.35625 146.15 187.51874999999998 146.15Z M196.83124999999998 146.15Q195.98124999999996 146.15 195.22499999999997 145.8375Q194.46874999999997 145.525 193.88124999999997 144.95L194.66874999999996 144.0Q195.10624999999996 144.425 195.68749999999997 144.65625Q196.26874999999998 144.8875 196.85624999999996 144.8875Q197.55624999999998 144.8875 197.91875 144.6Q198.28124999999997 144.3125 198.28124999999997 143.8375Q198.28124999999997 143.5 198.11874999999998 143.29375Q197.95624999999998 143.0875 197.67499999999998 142.9375Q197.39374999999998 142.7875 197.01874999999998 142.6375L195.89374999999998 142.15Q195.49374999999998 141.975 195.11249999999995 141.69375Q194.73124999999996 141.4125 194.48749999999995 140.99374999999998Q194.24374999999998 140.575 194.24374999999998 139.975Q194.24374999999998 139.325 194.59999999999997 138.80624999999998Q194.95624999999998 138.2875 195.575 137.98125Q196.19374999999997 137.675 196.99374999999998 137.675Q197.73124999999996 137.675 198.38749999999996 137.94375000000002Q199.04374999999996 138.2125 199.50624999999997 138.675L198.74374999999998 139.625Q198.34374999999997 139.3 197.90624999999997 139.11875Q197.46874999999997 138.9375 196.99374999999998 138.9375Q196.41874999999996 138.9375 196.06249999999997 139.19375Q195.70624999999998 139.45 195.70624999999998 139.9Q195.70624999999998 140.2125 195.8875 140.41875Q196.06874999999997 140.625 196.37499999999997 140.76875Q196.68124999999998 140.9125 197.00624999999997 141.05L198.11874999999998 141.5125Q198.60624999999996 141.725 198.98124999999996 142.0125Q199.35624999999996 142.3 199.56249999999997 142.7125Q199.76874999999998 143.125 199.76874999999998 143.725Q199.76874999999998 144.3875 199.41875 144.9375Q199.06874999999997 145.4875 198.41249999999997 145.81875000000002Q197.75624999999997 146.15 196.83124999999998 146.15Z M203.75624999999997 146.0V137.825H205.20624999999998V141.1125H208.51874999999998V137.825H209.96874999999997V146.0H208.51874999999998V142.375H205.20624999999998V146.0Z M213.48124999999996 146.0 216.14374999999995 137.825H217.84374999999997L220.50624999999997 146.0H218.98124999999996L217.73124999999996 141.65Q217.53124999999997 141.0 217.34999999999997 140.3125Q217.16874999999996 139.625 216.99374999999998 138.95H216.94374999999997Q216.78124999999997 139.6375 216.59999999999997 140.31875Q216.41874999999996 141.0 216.21874999999997 141.65L214.95624999999995 146.0ZM215.05624999999998 143.7875V142.65H218.90624999999997V143.7875Z M226.91874999999996 146.15Q226.20624999999995 146.15 225.63749999999996 145.95Q225.06874999999997 145.75 224.66249999999997 145.3125Q224.25624999999997 144.875 224.03749999999997 144.175Q223.81874999999997 143.475 223.81874999999997 142.4875V137.825H225.26874999999995V142.6Q225.26874999999995 143.4625 225.47499999999997 143.9625Q225.68124999999998 144.4625 226.05624999999998 144.675Q226.43124999999998 144.8875 226.91874999999996 144.8875Q227.41874999999996 144.8875 227.79999999999995 144.675Q228.18124999999998 144.4625 228.39999999999998 143.9625Q228.61874999999998 143.4625 228.61874999999998 142.6V137.825H230.00624999999997V142.4875Q230.00624999999997 143.475 229.79374999999996 144.175Q229.58124999999995 144.875 229.17499999999995 145.3125Q228.76874999999995 145.75 228.19999999999996 145.95Q227.63124999999997 146.15 226.91874999999996 146.15Z M236.80624999999998 146.15Q235.95624999999995 146.15 235.19999999999996 145.8375Q234.44374999999997 145.525 233.85624999999996 144.95L234.64374999999995 144.0Q235.08124999999995 144.425 235.66249999999997 144.65625Q236.24374999999998 144.8875 236.83124999999995 144.8875Q237.53124999999997 144.8875 237.89374999999995 144.6Q238.25624999999997 144.3125 238.25624999999997 143.8375Q238.25624999999997 143.5 238.09374999999997 143.29375Q237.93124999999998 143.0875 237.64999999999998 142.9375Q237.36874999999998 142.7875 236.99374999999998 142.6375L235.86874999999998 142.15Q235.46874999999997 141.975 235.08749999999998 141.69375Q234.70624999999995 141.4125 234.46249999999998 140.99374999999998Q234.21874999999997 140.575 234.21874999999997 139.975Q234.21874999999997 139.325 234.575 138.80624999999998Q234.93124999999998 138.2875 235.54999999999995 137.98125Q236.16874999999996 137.675 236.96874999999997 137.675Q237.70624999999995 137.675 238.36249999999995 137.94375000000002Q239.01874999999995 138.2125 239.48124999999996 138.675L238.71874999999997 139.625Q238.31874999999997 139.3 237.88124999999997 139.11875Q237.44374999999997 138.9375 236.96874999999997 138.9375Q236.39374999999995 138.9375 236.03749999999997 139.19375Q235.68124999999998 139.45 235.68124999999998 139.9Q235.68124999999998 140.2125 235.86249999999995 140.41875Q236.04374999999996 140.625 236.34999999999997 140.76875Q236.65624999999997 140.9125 236.98124999999996 141.05L238.09374999999997 141.5125Q238.58124999999995 141.725 238.95624999999995 142.0125Q239.33124999999995 142.3 239.53749999999997 142.7125Q239.74374999999998 143.125 239.74374999999998 143.725Q239.74374999999998 144.3875 239.39374999999995 144.9375Q239.04374999999996 145.4875 238.38749999999996 145.81875000000002Q237.73124999999996 146.15 236.80624999999998 146.15Z  M249.41874999999996 142.9625Q249.03124999999997 142.9625 248.75624999999997 142.68125Q248.48124999999996 142.4 248.48124999999996 141.9875Q248.48124999999996 141.5625 248.75624999999997 141.2875Q249.03124999999997 141.0125 249.41874999999996 141.0125Q249.81874999999997 141.0125 250.08124999999995 141.2875Q250.34374999999997 141.5625 250.34374999999997 141.9875Q250.34374999999997 142.4 250.08124999999995 142.68125Q249.81874999999997 142.9625 249.41874999999996 142.9625Z  M259.66875 146.0V137.825H262.28124999999994Q263.13124999999997 137.825 263.78749999999997 138.01875Q264.44374999999997 138.2125 264.82499999999993 138.65Q265.20624999999995 139.0875 265.20624999999995 139.8375Q265.20624999999995 140.4625 264.91249999999997 140.94375000000002Q264.61875 141.425 264.06874999999997 141.6125V141.6625Q264.79375 141.8125 265.2125 142.26875Q265.63124999999997 142.725 265.63124999999997 143.5375Q265.63124999999997 144.375 265.22499999999997 144.925Q264.81874999999997 145.475 264.10624999999993 145.7375Q263.39374999999995 146.0 262.49375 146.0ZM261.11875 141.2H262.15624999999994Q263.00624999999997 141.2 263.39374999999995 140.8875Q263.78124999999994 140.575 263.78124999999994 140.05Q263.78124999999994 139.45 263.38124999999997 139.2Q262.98125 138.95 262.18125 138.95H261.11875ZM261.11875 144.875H262.34374999999994Q263.24375 144.875 263.73124999999993 144.54375Q264.21874999999994 144.2125 264.21874999999994 143.525Q264.21874999999994 142.875 263.74375 142.58125Q263.26874999999995 142.2875 262.34374999999994 142.2875H261.11875Z M269.63124999999997 146.0V137.825H272.39374999999995Q273.2437499999999 137.825 273.91874999999993 138.05Q274.59374999999994 138.275 274.99375 138.80625Q275.39374999999995 139.3375 275.39374999999995 140.25Q275.39374999999995 141.125 274.99375 141.6875Q274.59374999999994 142.25 273.91874999999993 142.525Q273.2437499999999 142.8 272.39374999999995 142.8H271.08124999999995V146.0ZM271.08124999999995 141.65H272.2437499999999Q273.08124999999995 141.65 273.525 141.3Q273.96874999999994 140.95 273.96874999999994 140.25Q273.96874999999994 139.55 273.525 139.26875Q273.08124999999995 138.9875 272.2437499999999 138.9875H271.08124999999995ZM274.09374999999994 146.0 272.1187499999999 142.4125 273.16874999999993 141.55 275.71874999999994 146.0Z M278.39374999999995 146.0 281.0562499999999 137.825H282.7562499999999L285.41874999999993 146.0H283.89374999999995L282.64374999999995 141.65Q282.4437499999999 141.0 282.26249999999993 140.3125Q282.08124999999995 139.625 281.90624999999994 138.95H281.85624999999993Q281.6937499999999 139.6375 281.51249999999993 140.31875Q281.33124999999995 141.0 281.1312499999999 141.65L279.8687499999999 146.0ZM279.96874999999994 143.7875V142.65H283.8187499999999V143.7875Z M288.93125 146.0V137.825H290.38124999999997V141.5375H290.41874999999993L293.33124999999995 137.825H294.94374999999997L292.43125 141.0125L295.36875 146.0H293.76874999999995L291.55625 142.15L290.38124999999997 143.6125V146.0Z M298.89374999999995 146.0V137.825H303.8187499999999V139.05H300.34374999999994V141.1375H303.28124999999994V142.3625H300.34374999999994V144.775H303.9437499999999V146.0Z  M314.69374999999997 148.225Q313.91874999999993 146.95 313.48124999999993 145.5625Q313.04374999999993 144.175 313.04374999999993 142.525Q313.04374999999993 140.875 313.48124999999993 139.4875Q313.91874999999993 138.1 314.69374999999997 136.825L315.59374999999994 137.225Q314.88124999999997 138.4125 314.54999999999995 139.78125Q314.21874999999994 141.15 314.21874999999994 142.525Q314.21874999999994 143.9 314.54999999999995 145.2625Q314.88124999999997 146.625 315.59374999999994 147.825Z M322.73125 146.15Q322.01874999999995 146.15 321.44999999999993 145.95Q320.88124999999997 145.75 320.47499999999997 145.3125Q320.06874999999997 144.875 319.84999999999997 144.175Q319.63124999999997 143.475 319.63124999999997 142.4875V137.825H321.08124999999995V142.6Q321.08124999999995 143.4625 321.28749999999997 143.9625Q321.49375 144.4625 321.86875 144.675Q322.24375 144.8875 322.73125 144.8875Q323.23125 144.8875 323.61249999999995 144.675Q323.99375 144.4625 324.2125 143.9625Q324.43125 143.4625 324.43125 142.6V137.825H325.81874999999997V142.4875Q325.81874999999997 143.475 325.60624999999993 144.175Q325.39374999999995 144.875 324.98749999999995 145.3125Q324.58124999999995 145.75 324.01249999999993 145.95Q323.44374999999997 146.15 322.73125 146.15Z M330.35625 146.0V137.825H331.94374999999997L334.39374999999995 142.325Q334.61875 142.7375 334.82499999999993 143.2125Q335.03124999999994 143.6875 335.21874999999994 144.175H335.26874999999995Q335.21874999999994 143.5125 335.15624999999994 142.79375Q335.09374999999994 142.075 335.09374999999994 141.4V137.825H336.48125V146.0H334.89374999999995L332.44374999999997 141.5Q332.21874999999994 141.0875 331.99999999999994 140.6125Q331.78124999999994 140.1375 331.59374999999994 139.65H331.54375Q331.61875 140.2875 331.68125 141.00625Q331.74375 141.725 331.74375 142.425V146.0Z M342.71874999999994 146.0V139.05H340.35624999999993V137.825H346.53124999999994V139.05H344.16874999999993V146.0Z M350.39374999999995 146.0V137.825H355.3187499999999V139.05H351.84374999999994V141.1375H354.78124999999994V142.3625H351.84374999999994V144.775H355.4437499999999V146.0Z M359.61875 146.0V137.825H362.38124999999997Q363.23124999999993 137.825 363.90624999999994 138.05Q364.58124999999995 138.275 364.98124999999993 138.80625Q365.38124999999997 139.3375 365.38124999999997 140.25Q365.38124999999997 141.125 364.98124999999993 141.6875Q364.58124999999995 142.25 363.90624999999994 142.525Q363.23124999999993 142.8 362.38124999999997 142.8H361.06874999999997V146.0ZM361.06874999999997 141.65H362.23124999999993Q363.06874999999997 141.65 363.51249999999993 141.3Q363.95624999999995 140.95 363.95624999999995 140.25Q363.95624999999995 139.55 363.51249999999993 139.26875Q363.06874999999997 138.9875 362.23124999999993 138.9875H361.06874999999997ZM364.08124999999995 146.0 362.10624999999993 142.4125 363.15624999999994 141.55 365.70624999999995 146.0Z M370.33124999999995 146.0 368.75624999999997 137.825H370.3062499999999L371.00624999999997 141.95Q371.10624999999993 142.6 371.1937499999999 143.25625Q371.28124999999994 143.9125 371.35624999999993 144.625H371.40624999999994Q371.51874999999995 143.9125 371.64374999999995 143.25625Q371.76874999999995 142.6 371.90624999999994 141.95L372.85624999999993 137.825H374.28124999999994L375.20624999999995 141.95Q375.34374999999994 142.5875 375.48124999999993 143.25Q375.6187499999999 143.9125 375.73124999999993 144.625H375.78124999999994Q375.85624999999993 143.9125 375.94999999999993 143.25625Q376.04374999999993 142.6 376.13124999999997 141.95L376.83124999999995 137.825H378.3062499999999L376.73124999999993 146.0H374.8062499999999L373.88124999999997 141.7Q373.79374999999993 141.25 373.7125 140.76875Q373.63124999999997 140.2875 373.5562499999999 139.725H373.50624999999997Q373.45624999999995 140.2875 373.3812499999999 140.76875Q373.3062499999999 141.25 373.20624999999995 141.7L372.25624999999997 146.0Z M382.06874999999997 146.0V137.825H386.9937499999999V139.05H383.51874999999995V141.1375H386.45624999999995V142.3625H383.51874999999995V144.775H387.1187499999999V146.0Z M393.68125 146.15Q392.83124999999995 146.15 392.07499999999993 145.8375Q391.31874999999997 145.525 390.73125 144.95L391.51874999999995 144.0Q391.95624999999995 144.425 392.53749999999997 144.65625Q393.11875 144.8875 393.70624999999995 144.8875Q394.40624999999994 144.8875 394.76874999999995 144.6Q395.13124999999997 144.3125 395.13124999999997 143.8375Q395.13124999999997 143.5 394.96875 143.29375Q394.80625 143.0875 394.525 142.9375Q394.24375 142.7875 393.86875 142.6375L392.74375 142.15Q392.34374999999994 141.975 391.9625 141.69375Q391.58124999999995 141.4125 391.3375 140.99374999999998Q391.09374999999994 140.575 391.09374999999994 139.975Q391.09374999999994 139.325 391.44999999999993 138.80624999999998Q391.80625 138.2875 392.42499999999995 137.98125Q393.04375 137.675 393.84374999999994 137.675Q394.58124999999995 137.675 395.23749999999995 137.94375000000002Q395.89374999999995 138.2125 396.35625 138.675L395.59374999999994 139.625Q395.19374999999997 139.3 394.75624999999997 139.11875Q394.31874999999997 138.9375 393.84374999999994 138.9375Q393.26874999999995 138.9375 392.91249999999997 139.19375Q392.55625 139.45 392.55625 139.9Q392.55625 140.2125 392.73749999999995 140.41875Q392.91875 140.625 393.22499999999997 140.76875Q393.53124999999994 140.9125 393.85625 141.05L394.96874999999994 141.5125Q395.45624999999995 141.725 395.83124999999995 142.0125Q396.20624999999995 142.3 396.41249999999997 142.7125Q396.61875 143.125 396.61875 143.725Q396.61875 144.3875 396.26874999999995 144.9375Q395.91875 145.4875 395.2625 145.81875000000002Q394.60625 146.15 393.68125 146.15Z M400.60625 146.0V137.825H405.53124999999994V139.05H402.05625V141.1375H404.99375V142.3625H402.05625V144.775H405.65624999999994V146.0Z M409.83125 146.0V137.825H412.59375Q413.44374999999997 137.825 414.11875 138.05Q414.79375 138.275 415.19375 138.80625Q415.59375 139.3375 415.59375 140.25Q415.59375 141.125 415.19375 141.6875Q414.79375 142.25 414.11875 142.525Q413.44374999999997 142.8 412.59375 142.8H411.28125V146.0ZM411.28125 141.65H412.44374999999997Q413.28125 141.65 413.725 141.3Q414.16875 140.95 414.16875 140.25Q414.16875 139.55 413.725 139.26875Q413.28125 138.9875 412.44374999999997 138.9875H411.28125ZM414.29375 146.0 412.31874999999997 142.4125 413.36875 141.55 415.91875 146.0Z M420.13124999999997 148.225 419.23125 147.825Q419.94374999999997 146.625 420.275 145.2625Q420.60625 143.9 420.60625 142.525Q420.60625 141.15 420.275 139.78125Q419.94374999999997 138.4125 419.23125 137.225L420.13124999999997 136.825Q420.91875 138.1 421.34999999999997 139.4875Q421.78124999999994 140.875 421.78124999999994 142.525Q421.78124999999994 144.175 421.34999999999997 145.5625Q420.91875 146.95 420.13124999999997 148.225Z" fill="var(--schiefer)"/></svg>
+      <p>Bestattungshaus Nickelsen · Dungenstraße 11 · 26919 Brake (Unterweser) · Telefon 04401 93 89 93</p>
+    </div>
+    <div>
+      <p><a href="index.html">Startseite</a></p>
+      <p><a href="index.html#impressum">Impressum</a></p>
+      <p>© Bestattungshaus Nickelsen</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
