@@ -3,220 +3,62 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Bestattungshaus Nickelsen</title>
+<title>Bestattungshaus Nickelsen · Bestatter in Brake (Unterweser)</title>
+<meta name="description" content="Bestattungshaus Nickelsen in Brake (Unterweser): Familienunternehmen seit 1924. Erd-, Feuer- und Seebestattung, Bestattungsvorsorge. Tag und Nacht erreichbar unter 04401 93 89 93.">
+<link rel="canonical" href="https://bestattungshaus-nickelsen.de/">
+<meta name="theme-color" content="#F6F2EA">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Bestattungshaus Nickelsen">
+<meta property="og:title" content="Bestattungshaus Nickelsen · Bestatter in Brake (Unterweser)">
+<meta property="og:description" content="Familienunternehmen seit 1924. Erd-, Feuer- und Seebestattung, Bestattungsvorsorge. Tag und Nacht erreichbar.">
+<meta property="og:url" content="https://bestattungshaus-nickelsen.de/">
+<meta property="og:image" content="https://bestattungshaus-nickelsen.de/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-<meta name="description" content="Bestattungshaus Nickelsen in Brake (Unterweser). Familienunternehmen seit 1924. Tag und Nacht erreichbar: 04401 93 89 93.">
-<style>
-@font-face { font-family: "Libre Caslon Text"; font-weight: 400; font-style: normal; font-display: swap; src: url("fonts/libre-caslon-text-400.woff2") format("woff2"); }
-@font-face { font-family: "Libre Caslon Text"; font-weight: 400; font-style: italic; font-display: swap; src: url("fonts/libre-caslon-text-400-italic.woff2") format("woff2"); }
-@font-face { font-family: "Source Sans 3"; font-weight: 400; font-style: normal; font-display: swap; src: url("fonts/source-sans-3-400.woff2") format("woff2"); }
-@font-face { font-family: "Source Sans 3"; font-weight: 600; font-style: normal; font-display: swap; src: url("fonts/source-sans-3-600.woff2") format("woff2"); }
-html { color-scheme: light dark; } body { margin: 0; } img { max-width: 100%; } [hidden] { display: none !important; }
-
-/* Layout: ruhige Einzelseite, Inhalt max. 1120px, Text links / Bild rechts im Wechsel; Fotos klein gerahmt, weil die Originale niedrig aufgelöst sind */
-:root {
-  --leinen: #F6F2EA;
-  --papier: #FFFFFF;
-  --tinte: #2A2A27;
-  --schiefer: #5E5C57;
-  --oliv: #55604A;
-  --auf-oliv: #F6F2EA;
-  --messing: #A88A5A;
-  --sand: #E2DCD0;
-  --band: #55604A;
-  --auf-band: #F6F2EA;
-  --serif: "Libre Caslon Text", Georgia, "Times New Roman", serif;
-  --sans: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
-  --max: 1120px;
-  --gutter-l: max(16px, env(safe-area-inset-left, 0px));
-  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --leinen: #1E201C; --papier: #262923; --tinte: #ECE7DC; --schiefer: #B4AFA4;
-    --oliv: #9AA88A; --auf-oliv: #1E201C; --messing: #C2A576; --sand: #3A3D35; --band: #2C3227; --auf-band: #ECE7DC;
-    color-scheme: dark;
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://bestattungshaus-nickelsen.de/#unternehmen",
+  "name": "Bestattungshaus Nickelsen",
+  "description": "Bestattungsunternehmen in Brake (Unterweser), Familienbetrieb in dritter Generation. Erd-, Feuer- und Seebestattungen, Bestattungsvorsorge.",
+  "url": "https://bestattungshaus-nickelsen.de/",
+  "image": "https://bestattungshaus-nickelsen.de/img/og.png",
+  "telephone": "+49 4401 938993",
+  "faxNumber": "+49 4401 938994",
+  "email": "info@bestattungshaus-nickelsen.de",
+  "foundingDate": "1924",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Dungenstraße 11",
+    "postalCode": "26919",
+    "addressLocality": "Brake (Unterweser)",
+    "addressRegion": "Niedersachsen",
+    "addressCountry": "DE"
+  },
+  "areaServed": ["Brake (Unterweser)", "Landkreis Wesermarsch"],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Hilfe im Trauerfall",
+    "telephone": "+49 4401 938993",
+    "availableLanguage": "de",
+    "hoursAvailable": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
   }
 }
-:root[data-theme="dark"] {
-  --leinen: #1E201C; --papier: #262923; --tinte: #ECE7DC; --schiefer: #B4AFA4;
-  --oliv: #9AA88A; --auf-oliv: #1E201C; --messing: #C2A576; --sand: #3A3D35; --band: #2C3227; --auf-band: #ECE7DC;
-  color-scheme: dark;
-}
-
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 88px; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body {
-  background: var(--leinen); color: var(--tinte);
-  font: 400 18px/1.6 var(--sans);
-  -webkit-text-size-adjust: 100%;
-}
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--leinen); }
-a { color: var(--oliv); text-underline-offset: 3px; }
-a:focus-visible, button:focus-visible { outline: 2px solid var(--messing); outline-offset: 3px; border-radius: 2px; }
-h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.2; text-wrap: balance; margin: 0; }
-h1 { font-size: clamp(32px, 4.4vw, 46px); }
-h2 { font-size: clamp(26px, 3vw, 32px); }
-h3 { font-family: var(--sans); font-weight: 600; font-size: 19px; line-height: 1.35; }
-p { margin: 0; max-width: 64ch; }
-.wrap { max-width: var(--max); margin: 0 auto; padding-left: var(--gutter-l); padding-right: var(--gutter-r); }
-.label { font: 600 13px/1.3 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--schiefer); }
-.strich { display: block; width: 40px; height: 1px; background: var(--messing); }
-.tel { font-variant-numeric: tabular-nums; white-space: nowrap; }
-
-/* Kopf */
-header.kopf { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--leinen); border-bottom: 1px solid var(--sand); }
-.kopf .wrap { display: flex; align-items: center; gap: 24px; padding-block: 10px; }
-.marke { display: grid; gap: 2px; text-decoration: none; color: var(--oliv); flex: none; }
-.marke .logo { display: block; height: 52px; width: auto; max-width: 100%; }
-.fusslogo { display: block; width: 320px; height: auto; max-width: 100%; margin-left: -54px; }
-nav.haupt { display: flex; gap: 22px; flex-wrap: wrap; margin-left: auto; }
-nav.haupt a { color: var(--tinte); text-decoration: none; font-size: 16px; }
-nav.haupt a:hover { color: var(--oliv); text-decoration: underline; }
-.erreichbar { text-align: right; flex: none; }
-.erreichbar small { display: block; font-size: 13px; color: var(--schiefer); line-height: 1.2; }
-.erreichbar a { display: inline-block; padding-block: 4px; font: 600 19px/1.3 var(--sans); text-decoration: none; }
-@media (max-width: 1020px) { nav.haupt { display: none; } .erreichbar { margin-left: auto; } }
-@media (max-width: 460px) { .erreichbar small { display: none; } .erreichbar a { font-size: 17px; } .marke .logo { height: 42px; } }
-
-/* Abschnitte */
-section { padding-block: 88px; }
-section + section { border-top: 1px solid var(--sand); }
-.kopfzeile { display: grid; gap: 14px; margin-bottom: 40px; }
-.kopfzeile p { color: var(--schiefer); }
-@media (max-width: 700px) { section { padding-block: 60px; } }
-
-/* Fotos */
-figure { margin: 0; }
-.foto { background: var(--papier); padding: 10px; border: 1px solid var(--sand); max-width: 100%; }
-.foto img { display: block; width: 100%; height: auto; }
-figcaption { font-size: 15px; color: var(--schiefer); padding-top: 10px; line-height: 1.4; }
-
-/* Einstieg */
-.einstieg .wrap { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 56px; align-items: center; }
-.einstieg .text { display: grid; gap: 22px; min-width: 0; }
-.einstieg .foto { max-width: 520px; justify-self: end; }
-.knoepfe { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; }
-.knopf { display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 4px; font: 600 17px/1 var(--sans); text-decoration: none; border: 1px solid var(--oliv); }
-.knopf.voll { background: var(--oliv); color: var(--auf-oliv); }
-.knopf.voll:hover { filter: brightness(.9); }
-.knopf.rahmen { color: var(--oliv); }
-.knopf.rahmen:hover { background: var(--papier); }
-@media (max-width: 820px) { .einstieg .wrap { grid-template-columns: 1fr; gap: 36px; } .einstieg .foto { justify-self: start; } }
-
-/* Trauerfall */
-.trauerfall { background: var(--papier); }
-.trauerfall .raster { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 56px; align-items: start; }
-ol.schritte { list-style: none; margin: 0; padding: 0; display: grid; gap: 28px; counter-reset: s; }
-ol.schritte li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 16px; counter-increment: s; }
-ol.schritte li::before { content: counter(s); font: 400 28px/1 var(--serif); color: var(--messing); padding-top: 2px; }
-ol.schritte p { color: var(--schiefer); margin-top: 4px; }
-.nummern { margin-top: 10px; display: grid; gap: 4px; }
-.nummern a { font: 600 22px/1.3 var(--sans); text-decoration: none; }
-.unterlagen { background: var(--leinen); border: 1px solid var(--sand); padding: 28px; display: grid; gap: 16px; }
-.unterlagen ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
-.unterlagen li { display: grid; grid-template-columns: 18px minmax(0,1fr); gap: 10px; line-height: 1.45; }
-.unterlagen li::before { content: ""; width: 12px; height: 12px; border: 1px solid var(--oliv); margin-top: 6px; }
-.unterlagen li small { display: block; color: var(--schiefer); font-size: 15px; }
-@media (max-width: 860px) { .trauerfall .raster { grid-template-columns: 1fr; gap: 40px; } }
-
-/* Leistungen */
-.leistungen .gruppen { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; }
-.gruppe { display: grid; gap: 14px; align-content: start; }
-.gruppe ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
-.gruppe li { padding-left: 18px; position: relative; line-height: 1.45; }
-.gruppe li::before { content: ""; position: absolute; left: 0; top: .7em; width: 8px; height: 1px; background: var(--messing); }
-.versprechen { margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--sand); display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px 48px; color: var(--schiefer); }
-@media (max-width: 860px) { .leistungen .gruppen { grid-template-columns: 1fr; gap: 32px; } .versprechen { grid-template-columns: 1fr; } }
-
-/* Bestattungsarten */
-.arten { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; align-items: start; }
-.art { background: var(--papier); border: 1px solid var(--sand); display: grid; grid-template-rows: auto 1fr; }
-.art img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; max-width: 100%; }
-.art div { padding: 22px 24px 26px; display: grid; gap: 10px; align-content: start; }
-.art p { color: var(--schiefer); font-size: 17px; }
-.graeber { margin-top: 56px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 48px; }
-dl.grabarten { margin: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px 40px; }
-dl.grabarten div { display: grid; gap: 4px; align-content: start; }
-dl.grabarten dt { font: 600 18px/1.35 var(--sans); }
-dl.grabarten dd { margin: 0; color: var(--schiefer); font-size: 17px; }
-@media (max-width: 900px) { .arten { grid-template-columns: 1fr; max-width: 520px; } .graeber { grid-template-columns: 1fr; gap: 28px; } }
-@media (max-width: 600px) { dl.grabarten { grid-template-columns: 1fr; } }
-
-/* Haus */
-.chronik { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 56px; align-items: start; }
-ol.jahre { list-style: none; margin: 0; padding: 0; border-left: 1px solid var(--sand); display: grid; gap: 24px; }
-ol.jahre li { padding-left: 24px; position: relative; display: grid; gap: 4px; }
-ol.jahre li::before { content: ""; position: absolute; left: -5px; top: 9px; width: 9px; height: 9px; border-radius: 50%; background: var(--leinen); border: 1px solid var(--messing); }
-ol.jahre .jahr { font: 400 22px/1.2 var(--serif); color: var(--oliv); font-variant-numeric: tabular-nums; }
-ol.jahre p { color: var(--schiefer); }
-.inhaber { display: grid; gap: 18px; max-width: 298px; }
-.inhaber blockquote { margin: 0; font: italic 400 19px/1.55 var(--serif); }
-.inhaber cite { display: block; font: 600 15px/1.4 var(--sans); font-style: normal; color: var(--schiefer); margin-top: 10px; }
-.raeume { margin-top: 64px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
-.raum { display: grid; gap: 14px; align-content: start; }
-.raum img { height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
-.raum p { color: var(--schiefer); font-size: 17px; }
-@media (max-width: 900px) { .chronik { grid-template-columns: 1fr; gap: 40px; } .raeume { grid-template-columns: 1fr; max-width: 520px; } }
-
-/* Zwei-Spalter */
-.zweier { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: center; }
-.zweier .text { display: grid; gap: 18px; }
-.zweier .foto { max-width: 420px; width: 100%; }
-.zweier.links .foto { order: -1; justify-self: start; }
-.zweier:not(.links) .foto { justify-self: end; }
-ul.punkte { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
-ul.punkte li { padding-left: 18px; position: relative; }
-ul.punkte li::before { content: ""; position: absolute; left: 0; top: .75em; width: 8px; height: 1px; background: var(--messing); }
-@media (max-width: 820px) { .zweier { grid-template-columns: 1fr; gap: 32px; } .zweier .foto, .zweier.links .foto { order: 0; justify-self: start; } }
-
-/* Leitsatz */
-.leitsatz { padding-block: 72px; }
-.leitsatz .wrap { display: grid; justify-items: center; gap: 18px; text-align: center; }
-.leitsatz p { font: italic 400 clamp(24px, 3.2vw, 34px)/1.35 var(--serif); color: var(--oliv); max-width: 24ch; text-wrap: balance; }
-
-/* Mehr erfahren */
-details { border-top: 1px solid var(--sand); margin-top: 6px; padding-top: 10px; }
-details summary { cursor: pointer; font-weight: 600; color: var(--oliv); font-size: 16px; list-style: none; display: flex; align-items: center; gap: 8px; min-height: 32px; }
-details summary::-webkit-details-marker { display: none; }
-details summary::after { content: "+"; font: 400 20px/1 var(--sans); color: var(--messing); }
-details[open] summary::after { content: "\2212"; }
-details p { margin-top: 10px; font-size: 16px; }
-details strong { color: var(--tinte); font-weight: 600; }
-
-/* Kontakt + Fuss */
-.kontakt { background: var(--band); color: var(--auf-band); }
-.kontakt h2, .kontakt a { color: var(--auf-band); }
-.kontakt .label { color: var(--auf-band); opacity: .8; }
-.kontakt .raster { display: grid; grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(0, 1fr)); gap: 48px; }
-.kontakt .block { display: grid; gap: 10px; align-content: start; }
-.kontakt .gross { font: 600 26px/1.25 var(--sans); text-decoration: none; }
-.kontakt address { font-style: normal; }
-@media (max-width: 860px) { .kontakt .raster { grid-template-columns: 1fr; gap: 32px; } }
-footer { padding-block: 40px 120px; font-size: 15px; color: var(--schiefer); }
-footer .wrap { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 32px; }
-footer p { max-width: none; }
-footer a { display: inline-block; padding-block: 6px; }
-@media (max-width: 700px) { footer .wrap { grid-template-columns: 1fr; } }
-
-/* Mobile Anrufleiste */
-.leiste { display: none; }
-@media (max-width: 700px) {
-  .leiste {
-    display: grid; grid-template-columns: 2fr 1fr; gap: 8px;
-    position: fixed; left: 0; right: 0; bottom: 0; z-index: 25;
-    background: var(--leinen); border-top: 1px solid var(--sand);
-    padding: 10px var(--gutter-r) calc(10px + env(safe-area-inset-bottom, 0px)) var(--gutter-l);
-  }
-  .leiste .knopf { justify-content: center; }
-  footer { padding-bottom: 130px; }
-}
-</style>
+</script>
 </head>
 <body>
 
-<header class="kopf">
+<header class="kopf mit-menue">
   <div class="wrap">
     <a class="marke" href="#start" aria-label="Bestattungshaus Nickelsen, zum Anfang">
       <svg class="logo" viewBox="-8 0 316 108" width="316" height="108" role="img" aria-label="Bestattungshaus Nickelsen"><title>Bestattungshaus Nickelsen</title><path d="M104.0,20 C116.65,10 137.35,10 150.0,20 S183.35,30 196.0,20" fill="none" stroke="var(--messing)" stroke-width="3" stroke-linecap="round"/><path d="M41.071999999999996 93.28 9.519999999999994 49.312V89.312L15.215999999999994 90.528V92.0H1.199999999999993V90.528L6.959999999999994 89.312V45.408L1.199999999999993 44.192V42.72H14.127999999999993L40.495999999999995 78.944V45.408L34.8 44.192V42.72H48.815999999999995V44.192L43.056 45.408V93.28Z M61.36 42.08Q63.215999999999994 42.08 64.368 43.263999999999996Q65.52 44.448 65.52 46.24Q65.52 47.967999999999996 64.368 49.152Q63.215999999999994 50.336 61.36 50.336Q59.504 50.336 58.384 49.152Q57.263999999999996 47.967999999999996 57.263999999999996 46.24Q57.263999999999996 44.448 58.384 43.263999999999996Q59.504 42.08 61.36 42.08ZM69.232 92.0H53.488V90.72L58.352 89.76V63.135999999999996L53.616 61.408V60.512L63.855999999999995 57.44H64.432V89.76L69.232 90.72Z M74.288 75.488Q74.288 70.24 76.464 66.144Q78.64 62.048 82.512 59.744Q86.384 57.44 91.312 57.44Q94.512 57.44 97.136 58.464Q99.75999999999999 59.488 101.29599999999999 61.216Q102.832 62.944 102.832 64.992Q102.832 66.656 102.032 67.648Q101.232 68.64 99.88799999999999 68.64Q96.56 68.64 96.112 64.608Q95.728 61.536 94.73599999999999 60.512Q93.744 59.488 91.50399999999999 59.488Q86.448 59.488 83.63199999999999 63.456Q80.81599999999999 67.424 80.81599999999999 74.208Q80.81599999999999 80.736 83.696 84.352Q86.576 87.968 91.824 87.968Q94.768 87.968 97.29599999999999 86.78399999999999Q99.824 85.6 101.488 83.29599999999999L102.192 82.336L103.40799999999999 82.976L103.088 83.80799999999999Q101.488 88.032 98.032 90.336Q94.576 92.64 89.904 92.64Q85.36 92.64 81.80799999999999 90.464Q78.256 88.288 76.27199999999999 84.384Q74.288 80.48 74.288 75.488Z M145.392 90.72V92.0H134.19199999999998L120.94399999999999 75.872L118.448 78.752V89.76L123.24799999999999 90.72V92.0H107.69599999999998V90.72L112.55999999999999 89.76V44.576L107.88799999999999 42.848V42.016L117.80799999999999 38.879999999999995H118.448V75.29599999999999L129.136 63.2Q130.48 61.664 130.48 60.896Q130.48 60.32 129.51999999999998 60.0Q128.56 59.68 125.74399999999999 59.36V58.08H140.07999999999998V59.36Q136.176 60.064 134.832 60.70399999999999Q133.488 61.343999999999994 132.016 63.007999999999996L124.78399999999999 71.456L140.016 89.76Z M151.472 72.288Q151.408 72.736 151.408 73.75999999999999Q151.408 80.8 154.224 84.384Q157.04 87.968 162.48 87.968Q165.61599999999999 87.968 168.30399999999997 86.848Q170.992 85.728 172.656 83.68L173.424 82.72L174.512 83.36L174.128 84.256Q172.464 88.16 168.752 90.4Q165.04 92.64 160.368 92.64Q155.824 92.64 152.336 90.49600000000001Q148.848 88.352 146.928 84.48Q145.008 80.608 145.008 75.55199999999999Q145.008 70.24 147.152 66.112Q149.296 61.983999999999995 153.168 59.711999999999996Q157.04 57.44 162.096 57.44Q168.368 57.44 171.728 61.12Q175.088 64.8 175.216 71.904L174.768 72.288ZM151.6 70.496 168.304 69.92Q168.496 69.152 168.496 67.29599999999999Q168.496 59.424 161.52 59.424Q157.296 59.424 154.736 62.304Q152.176 65.184 151.6 70.496Z M195.12 92.0H180.336V90.784L184.81600000000003 89.824V44.512L180.336 42.848V42.016L190.12800000000001 38.879999999999995H190.704V89.824L195.12 90.784Z M220.78400000000002 58.528V67.424H219.44000000000003Q218.48000000000002 59.36 211.95200000000003 59.36Q209.39200000000002 59.36 207.88800000000003 60.768Q206.38400000000001 62.176 206.38400000000001 64.544Q206.38400000000001 66.336 207.312 67.584Q208.24 68.832 209.584 69.66399999999999Q210.92800000000003 70.496 213.29600000000002 71.584Q216.24 72.928 218.0 74.08Q219.76000000000002 75.232 221.04000000000002 77.24799999999999Q222.32000000000002 79.264 222.32000000000002 82.272Q222.32000000000002 87.008 219.15200000000002 89.824Q215.984 92.64 210.544 92.64Q208.496 92.64 206.032 92.256Q203.568 91.872 201.71200000000002 91.232L201.328 80.864H202.864Q203.312 85.728 205.36 88.22399999999999Q207.40800000000002 90.72 211.056 90.72Q213.936 90.72 215.66400000000002 89.12Q217.39200000000002 87.52 217.39200000000002 84.832Q217.39200000000002 82.848 216.43200000000002 81.47200000000001Q215.472 80.096 214.06400000000002 79.232Q212.656 78.368 210.096 77.088Q207.216 75.68 205.488 74.56Q203.76000000000002 73.44 202.544 71.52Q201.328 69.6 201.328 66.78399999999999Q201.328 62.304 204.43200000000002 59.872Q207.536 57.44 213.23200000000003 57.44Q215.40800000000002 57.44 217.488 57.727999999999994Q219.568 58.016 220.78400000000002 58.528Z M235.568 72.288Q235.504 72.736 235.504 73.75999999999999Q235.504 80.8 238.32 84.384Q241.136 87.968 246.576 87.968Q249.712 87.968 252.39999999999998 86.848Q255.088 85.728 256.752 83.68L257.52 82.72L258.608 83.36L258.224 84.256Q256.56 88.16 252.848 90.4Q249.136 92.64 244.464 92.64Q239.92000000000002 92.64 236.43200000000002 90.49600000000001Q232.94400000000002 88.352 231.024 84.48Q229.104 80.608 229.104 75.55199999999999Q229.104 70.24 231.248 66.112Q233.392 61.983999999999995 237.264 59.711999999999996Q241.136 57.44 246.192 57.44Q252.464 57.44 255.824 61.12Q259.184 64.8 259.312 71.904L258.86400000000003 72.288ZM235.696 70.496 252.4 69.92Q252.592 69.152 252.592 67.29599999999999Q252.592 59.424 245.616 59.424Q241.392 59.424 238.832 62.304Q236.272 65.184 235.696 70.496Z M300.336 90.72V92.0H284.656V90.72L289.456 89.824V71.008Q289.456 68.19200000000001 289.29600000000005 66.56Q289.136 64.928 288.68800000000005 63.903999999999996Q287.47200000000004 60.96 283.696 60.96Q281.392 60.96 279.24800000000005 61.983999999999995Q277.10400000000004 63.007999999999996 275.504 64.928V89.76L280.30400000000003 90.72V92.0H264.56V90.72L269.42400000000004 89.76V63.2L264.68800000000005 61.408V60.576L274.608 57.44H275.24800000000005V62.879999999999995Q278.0 60.256 281.10400000000004 58.848Q284.208 57.44 287.28000000000003 57.44Q289.84000000000003 57.44 291.824 58.464Q293.808 59.488 294.704 61.28Q295.216 62.304 295.376 64.0Q295.536 65.696 295.536 70.368V89.824Z" fill="var(--oliv)"/></svg>
@@ -233,6 +75,17 @@ footer a { display: inline-block; padding-block: 6px; }
       <small>Tag und Nacht erreichbar</small>
       <a class="tel" href="tel:+494401938993">04401 93 89 93</a>
     </div>
+    <details class="menue">
+      <summary><span class="balken" aria-hidden="true"></span>Menü</summary>
+      <nav aria-label="Hauptnavigation für kleine Bildschirme">
+        <a href="#trauerfall">Im Trauerfall</a>
+        <a href="#leistungen">Leistungen</a>
+        <a href="#bestattungsarten">Bestattungsarten</a>
+        <a href="#vorsorge">Vorsorge</a>
+        <a href="#haus">Unser Haus</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </details>
   </div>
 </header>
 
@@ -241,8 +94,8 @@ footer a { display: inline-block; padding-block: 6px; }
     <div class="wrap">
       <div class="text">
         <span class="label">Bestattungshaus Nickelsen · Brake (Unterweser)</span>
-        <h1>Wir begleiten Familien in Brake seit 1924.</h1>
-        <p>Wir kümmern uns um eine würdevolle Bestattung und um Sie als Angehörige. Informieren Sie sich in Ruhe. Wenn Sie Fragen haben, rufen Sie uns an, zu jeder Zeit.</p>
+        <h1>Seit über 100 Jahren an der Seite der Familien in Brake.</h1>
+        <p>Seit 1924 kümmern wir uns um würdevolle Bestattungen und um Sie als Angehörige. Informieren Sie sich in Ruhe. Wenn Sie Fragen haben, rufen Sie uns an, zu jeder Zeit.</p>
         <div class="knoepfe">
           <a class="knopf voll" href="#trauerfall">Im Trauerfall</a>
           <a class="knopf rahmen" href="#vorsorge">Vorsorge</a>
@@ -273,13 +126,13 @@ footer a { display: inline-block; padding-block: 6px; }
         <aside class="unterlagen" aria-labelledby="unterlagen-titel">
           <h3 id="unterlagen-titel">Diese Unterlagen benötigen wir</h3>
           <ul>
-            <li><span>Familienstammbuch</span></li>
-            <li><span>Geburtsurkunde<small>bei ledigen Verstorbenen</small></span></li>
-            <li><span>Sterbeurkunde des Ehepartners<small>bei verwitweten Verstorbenen</small></span></li>
-            <li><span>Scheidungsurteil<small>bei geschiedenen Verstorbenen</small></span></li>
-            <li><span>Rentenbescheide und Zusatzrenten</span></li>
-            <li><span>Versicherungsunterlagen, z. B. Sterbekasse</span></li>
-            <li><span>Krankenkassenkarte</span></li>
+            <li><input type="checkbox" id="unterlage-1"><label for="unterlage-1">Familienstammbuch</label></li>
+            <li><input type="checkbox" id="unterlage-2"><label for="unterlage-2">Geburtsurkunde<small>bei ledigen Verstorbenen</small></label></li>
+            <li><input type="checkbox" id="unterlage-3"><label for="unterlage-3">Sterbeurkunde des Ehepartners<small>bei verwitweten Verstorbenen</small></label></li>
+            <li><input type="checkbox" id="unterlage-4"><label for="unterlage-4">Scheidungsurteil<small>bei geschiedenen Verstorbenen</small></label></li>
+            <li><input type="checkbox" id="unterlage-5"><label for="unterlage-5">Rentenbescheide und Zusatzrenten</label></li>
+            <li><input type="checkbox" id="unterlage-6"><label for="unterlage-6">Versicherungsunterlagen, z. B. Sterbekasse</label></li>
+            <li><input type="checkbox" id="unterlage-7"><label for="unterlage-7">Krankenkassenkarte</label></li>
           </ul>
         </aside>
       </div>
@@ -294,8 +147,8 @@ footer a { display: inline-block; padding-block: 6px; }
         <p>Wir beraten Sie einfühlsam und nehmen Ihnen die Formalitäten ab. Mit der Erfahrung aus drei Generationen helfen wir bei allen Entscheidungen.</p>
       </div>
       <div class="gruppen">
-        <div class="gruppe">
-          <h3>Überführung und Formalitäten</h3>
+        <details class="gruppe klapp" open>
+          <summary><h3>Überführung und Formalitäten</h3></summary>
           <ul>
             <li>Überführung vom Sterbeort</li>
             <li>Fachgerechte Versorgung und Aufbahrung</li>
@@ -303,9 +156,9 @@ footer a { display: inline-block; padding-block: 6px; }
             <li>Rentenanträge und Rentenabmeldung</li>
             <li>Schreiben an Krankenkasse, Sterbekasse, Versicherungen und Versorgungsämter</li>
           </ul>
-        </div>
-        <div class="gruppe">
-          <h3>Abschied und Trauerfeier</h3>
+        </details>
+        <details class="gruppe klapp" open>
+          <summary><h3>Abschied und Trauerfeier</h3></summary>
           <ul>
             <li>Abschiednahme in unserem Abschiedsraum, wenn gewünscht</li>
             <li>Termine mit Pastoren oder Trauerrednern</li>
@@ -313,16 +166,16 @@ footer a { display: inline-block; padding-block: 6px; }
             <li>Dekoration der Feierhalle</li>
             <li>Begleitung bei Friedhofsfragen, Grabauswahl und Steinmetzarbeiten</li>
           </ul>
-        </div>
-        <div class="gruppe">
-          <h3>Drucksachen und Blumen</h3>
+        </details>
+        <details class="gruppe klapp" open>
+          <summary><h3>Drucksachen und Blumen</h3></summary>
           <ul>
             <li>Traueranzeige, gemeinsam gestaltet</li>
             <li>Trauerbriefe und Danksagungen</li>
             <li>Exklusive Trauerpapiere zur Auswahl</li>
             <li>Beratung und Bestellung des Blumenschmucks</li>
           </ul>
-        </div>
+        </details>
       </div>
       <div class="versprechen">
         <p>Alles wird genau so durchgeführt, wie wir es mit Ihnen besprochen haben.</p>
@@ -367,6 +220,8 @@ footer a { display: inline-block; padding-block: 6px; }
           <h3 style="font-family:var(--serif);font-weight:400;font-size:24px">Grabstätten</h3>
           <p>Welche Grabarten möglich sind, regelt die Satzung des jeweiligen Friedhofs. Wir beraten Sie dazu.</p>
         </div>
+        <details class="klapp klapp-dl" open>
+        <summary>Alle Grabarten anzeigen</summary>
         <dl class="grabarten">
           <div><dt>Wahlgrab (Familiengrab)</dt><dd>Lage, Größe und Anzahl der Grabstellen sind wählbar. Das Nutzungsrecht lässt sich verlängern, oft über Generationen. Als Tiefengrab sind zwei Beisetzungen übereinander möglich.</dd></div>
           <div><dt>Reihengrab</dt><dd>Für einen Verstorbenen, im Sarg oder in der Urne. Die Lage ist nicht wählbar, die Ruhezeit kann nicht verlängert werden.</dd></div>
@@ -375,6 +230,7 @@ footer a { display: inline-block; padding-block: 6px; }
           <div><dt>Anonymes Grab</dt><dd>Auf einem Rasenfeld, gepflegt von der Friedhofsverwaltung. Eine Teilnahme an der Beisetzung ist nicht möglich.</dd></div>
           <div><dt>Baumbestattung im FriedWald</dt><dd>Die abbaubare Urne wird an den Wurzeln eines Baumes beigesetzt. Einzel-, Partner-, Familien- oder Gemeinschaftsbäume lassen sich vorher aussuchen. <a href="https://www.friedwald.de" rel="noopener">friedwald.de</a></dd></div>
         </dl>
+        </details>
       </div>
     </div>
   </section>
@@ -480,7 +336,8 @@ footer a { display: inline-block; padding-block: 6px; }
         <div class="block">
           <span class="label">E-Mail</span>
           <a href="mailto:info@bestattungshaus-nickelsen.de">info@bestattungshaus-nickelsen.de</a>
-          <p>Gespräche gern nach Vereinbarung, bei uns oder bei Ihnen zu Hause.</p>
+          <span class="label" style="margin-top:14px">Öffnungszeiten</span>
+          <p>Telefonisch sind wir rund um die Uhr erreichbar. Besuche im Bestattungshaus sind nach Vereinbarung jederzeit möglich, Gespräche auf Wunsch auch bei Ihnen zu Hause.</p>
         </div>
       </div>
     </div>
@@ -504,5 +361,30 @@ footer a { display: inline-block; padding-block: 6px; }
   <a class="knopf voll tel" href="tel:+494401938993">Anrufen: 04401 93 89 93</a>
   <a class="knopf rahmen" href="#kontakt">Adresse</a>
 </div>
+<script>
+(function () {
+  // Am Handy starten die langen Listen zugeklappt; ohne JavaScript bleiben sie offen.
+  var schmal = window.matchMedia("(max-width: 700px)");
+  var klapp = document.querySelectorAll("details.klapp");
+  function anpassen() {
+    klapp.forEach(function (d) {
+      if (schmal.matches) { d.removeAttribute("open"); } else { d.setAttribute("open", ""); }
+      d.querySelector("summary").tabIndex = schmal.matches ? 0 : -1;
+    });
+  }
+  anpassen();
+  schmal.addEventListener("change", anpassen);
+  klapp.forEach(function (d) {
+    d.querySelector("summary").addEventListener("click", function (e) { if (!schmal.matches) { e.preventDefault(); } });
+  });
+  // Menü schließt nach Auswahl, bei Klick daneben und mit Escape.
+  var menue = document.querySelector("details.menue");
+  if (menue) {
+    menue.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { menue.removeAttribute("open"); }); });
+    document.addEventListener("click", function (e) { if (!menue.contains(e.target)) { menue.removeAttribute("open"); } });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") { menue.removeAttribute("open"); } });
+  }
+})();
+</script>
 </body>
 </html>
